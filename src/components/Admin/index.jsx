@@ -3,7 +3,7 @@ import { Switch, Route, Link } from "react-router-dom"
 import {useStore} from "../../store";
 
 import Routes from "../../routes/admin";
-
+import Loading from "../Loading";
 console.log(Routes);
 
 const Admin = () => {
@@ -20,7 +20,7 @@ const Admin = () => {
             </ul>
         </nav> 
         <div>
-            <Suspense fallback={<div>Loading</div>}>
+            <Suspense fallback={<Loading/>}>
                 {Routes.map(route => {
                     return <Route key={route.path}  {...route} />
                 })}

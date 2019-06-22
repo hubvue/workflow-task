@@ -3,6 +3,7 @@ import { Switch, Route,Link } from "react-router-dom"
 import {useStore} from "../../store";
 
 import Routes from "../../routes/user";
+import Loading from "../Loading";
 const User = () => {
 
     return (
@@ -15,7 +16,7 @@ const User = () => {
                 </ul>
             </nav> 
             <div>
-               <Suspense fallback={<div>Loading...</div>}>
+                <Suspense fallback={<Loading/>}>
                     {Routes.map(route => {
                         return <Route key={route.path}  {...route} />
                     })}
