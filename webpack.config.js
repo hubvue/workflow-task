@@ -6,7 +6,7 @@ const {resolve} = require("path");
 module.exports = {
     output: {
         path: resolve("dist"),
-        filename: "scripts/[name].js"
+        filename: "scripts/[name]-[hash:5].js"
     },
     devServer: {
         hot:true,
@@ -62,8 +62,8 @@ module.exports = {
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
-            filename: "styles/[name].css",
-            chunkFilename: "styles/[id].css"
+            filename: "styles/[name]-[hash:5].css",
+            chunkFilename: "styles/[id]-[hash:5].css"
         }),
         new webpack.HotModuleReplacementPlugin(),
     ]
