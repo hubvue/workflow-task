@@ -28,7 +28,7 @@ const Examine = () => {
                             <td>{task.name}</td>
                             <td>{task.content}</td>
                             <td>{task.state}</td>
-                            <td><button className="btn btn-outline-dark" onClick={examineHandle(idx)}>提交</button></td>
+                            <td><button className="btn btn-outline-dark" onClick={examineHandle(idx)}>审核</button></td>
                         </tr>
                     ))}
                 </tbody>

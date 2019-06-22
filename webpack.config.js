@@ -2,7 +2,12 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin} = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require("webpack");
+const {resolve} = require("path");
 module.exports = {
+    output: {
+        path: resolve("dist"),
+        filename: "scripts/[name].js"
+    },
     devServer: {
         hot:true,
         open:true,
@@ -10,7 +15,7 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.jsx']
     },
-    devtool: "source-map",
+    // devtool: "source-map",
     module: {
         rules: [{
             test: /\.(js|jsx)$/,
@@ -27,10 +32,33 @@ module.exports = {
             }]
         }]
     },
+    optimization: {
+        runtimeChunk: {
+            name: "runtime",
+        },
+        splitChunks: {
+            chunks: 'all',
+            cacheGroups: {
+                common: {
+                    minChunks: 2,
+                    name: 'commons',
+                    chunks: 'async',
+                    priority: 10,
+                    reuseExistingChunk: true,
+                    enforce: true,
+                }
+            }
+        }
+    },
     plugins: [
         new HtmlWebpackPlugin({
             filename: "index.html",
-            template: "./index.html"
+            template: "./index.html",
+            minify: {
+                collapseWhitespace: true,
+                processConditionalComments: true,
+                removeAttributeQuotes: true,
+            }
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({

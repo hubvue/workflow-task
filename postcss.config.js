@@ -6,7 +6,6 @@ module.exports = {
     plugins: [
         PresetEnv({
             stage: 0,
-            browsers: "last 3 versions",
             preserve: false,
             insertBefore: {
                 "postcss-apply": PostcssApply({
