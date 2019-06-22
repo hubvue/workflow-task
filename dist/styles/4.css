@@ -1,0 +1,23 @@
+.admin__home{
+    height:400px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.home__task_release{
+    position: absolute;
+    z-index:9;
+}
+.release__wrapper{
+    box-shadow: 0 0 3px 0 rgba(0,0,0,.5);
+    width: 500px;
+    height: 350px;
+    background-color:#fff;
+    border-radius:12px;
+}
+.form__container{
+    padding: 20px;
+}
+.release_btn{
+    text-align: center;
+}
