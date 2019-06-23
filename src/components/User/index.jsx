@@ -10,9 +10,9 @@ const User = () => {
         <div className="col-lg-6 wrapper">
             <nav className="header">
                 <ul className="row">
-                    <li className="col-md-4 col-sm-4"><Link to="/user/receive">Wait Receive</Link></li>
-                    <li className="col-md-4 col-sm-4"><Link to="/user/implement">Implement Task</Link></li>
-                    <li className="col-md-4 col-sm-4"><Link to="/user/completed">Completed Task</Link></li>
+                    <li className="col-md-4 col-sm-4 col-4"><Link to="/user/receive">Wait Receive</Link></li>
+                    <li className="col-md-4 col-sm-4  col-4"><Link to="/user/implement">Implement Task</Link></li>
+                    <li className="col-md-4 col-sm-4  col-4"><Link to="/user/completed">Completed Task</Link></li>
                 </ul>
             </nav> 
             <div>

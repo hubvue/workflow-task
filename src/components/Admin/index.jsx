@@ -13,10 +13,10 @@ const Admin = () => {
     return <div className="col-lg-6 wrapper">
         <nav className="header">
             <ul className="row">
-                <li className="col-md-3 col-sm-3"><Link to="/">Admin Home</Link></li>
-                <li className="col-md-3 col-sm-3"><Link to="/admin/implement">Implement Task</Link></li>
-                <li className="col-md-3 col-sm-3"><Link to="/admin/examine">Wait Examine</Link></li>
-                <li className="col-md-3 col-sm-3"><Link to="/admin/completed">Completed task</Link></li>
+                <li className="col-md-3 col-sm-3 col-3"><Link to="/">Admin Home</Link></li>
+                <li className="col-md-3 col-sm-3 col-3"><Link to="/admin/implement">Implement Task</Link></li>
+                <li className="col-md-3 col-sm-3 col-3"><Link to="/admin/examine">Wait Examine</Link></li>
+                <li className="col-md-3 col-sm-3 col-3"><Link to="/admin/completed">Completed task</Link></li>
             </ul>
         </nav> 
         <div>
